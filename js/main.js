@@ -159,4 +159,10 @@ $(function() {
 
     $('.input__phone').inputmask("+7 (999)-999-99-99");
 
+    // Main banner arrow
+
+    $('body').on('click', '.main__arrow-svg', function() {
+        $('html, body').animate({scrollTop:950}, '500');
+    })
+
 });

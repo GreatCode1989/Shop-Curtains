@@ -129,7 +129,7 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <a href="#" class="btn btn--white mobile-menu__order">Оформить заявку</a>
+                            <a href="order.html" class="btn btn--white mobile-menu__order">Оформить заявку</a>
                         </div>
                         <a href="tel:+79854569331" class="mobile-menu__phone-link">+7-(985)-456-93-31</a>
                         <div class="mobile-menu__soc">
@@ -292,16 +292,24 @@
                         </div>
                         <div class="work__slider d-md-none">
                             <div class="work__slider-item">
-                                <img class="img-fluid" src="img/work-1.jpg">
+                                <a class="fancy" data-fancybox="images" href="img/work-1.jpg">
+                                    <img class="img-fluid" src="img/work-1.jpg">
+                                </a>
                             </div>
                             <div class="work__slider-item">
-                                <img class="img-fluid" src="img/work-2.jpg">
+                                <a class="fancy" data-fancybox="images" href="img/work-2.jpg">
+                                    <img class="img-fluid" src="img/work-2.jpg">
+                                </a>
                             </div>
                             <div class="work__slider-item">
-                                <img class="img-fluid" src="img/work-3.jpg">
+                                <a class="fancy" data-fancybox="images" href="img/work-3.jpg">
+                                    <img class="img-fluid" src="img/work-3.jpg">
+                                </a>
                             </div>
                             <div class="work__slider-item">
-                                <img class="img-fluid" src="img/work-4.jpg">
+                                <a class="fancy" data-fancybox="images" href="img/work-4.jpg">
+                                    <img class="img-fluid" src="img/work-4.jpg">
+                                </a>
                             </div>
                         </div>
                         <div class="container">
@@ -526,21 +534,23 @@
     <div id="keep-in-touch" class="modal">
         <div class="modal__inner">
             <div class="stroke">
-                <div class="modal__title">Заказать обратный звонок бесплатно</div>
-                <div class="keep-in-touch__form">
-                    <input type="text" class="input design__form-input" name="keep-in-touch-name" placeholder="Ваше имя" required>
-                    <input type="text" class="input input__phone design__form-input input__phone" name="keep-in-touch-phone" placeholder="+7 (___)-___-__-__" required> 
-                    <label for="order-form__checkbox" class="label label--checkbox">
-                        <input type="checkbox" class="checkbox" id="order-form__chekbox" required>
-                        <span class="label__text">Согласен с обработкой моих персональных данных в соответствии с <a class="order-form__link">политикой конфиденциальности</a></span>
-                    </label>
-                    <input type="submit" class="btn btn--tiffany" value="Отправить">
-                </div>
-                <div class="modal__close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                        <path d="M0 2.35294L2.35294 0L7.35294 5L12.3529 0L15 2.35294L10 7.35294L15 12.3529L12.3529 15L7.35294 10L2.35294 15L0 12.3529L5 7.35294L0 2.35294Z" fill="white" fill-opacity="0.7"/>
-                    </svg>
-                </div>
+                <div class="keep-in-touch__stroke-inner">
+                    <div class="modal__title">Заказать обратный звонок бесплатно</div>
+                    <form class="keep-in-touch__form">
+                        <input type="text" class="input design__form-input" name="keep-in-touch-name" placeholder="Ваше имя" required>
+                        <input type="text" class="input input__phone design__form-input input__phone" name="keep-in-touch-phone" placeholder="+7 (___)-___-__-__" required> 
+                        <label for="order-form__checkbox" class="label label--checkbox">
+                            <input type="checkbox" class="checkbox" id="order-form__chekbox" required>
+                            <span class="label__text">Согласен с обработкой моих персональных данных в соответствии с <a class="order-form__link">политикой конфиденциальности</a></span>
+                        </label>
+                        <input type="submit" class="btn btn--tiffany" value="Отправить">
+                    </form>
+                </div>                
+            </div>
+            <div class="modal__close fancybox-close-small" data-fancybox-close>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                    <path d="M0 2.35294L2.35294 0L7.35294 5L12.3529 0L15 2.35294L10 7.35294L15 12.3529L12.3529 15L7.35294 10L2.35294 15L0 12.3529L5 7.35294L0 2.35294Z" fill="white" fill-opacity="0.7"/>
+                </svg>
             </div>
         </div>
     </div>

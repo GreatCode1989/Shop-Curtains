@@ -178,20 +178,20 @@
                             <div class="order__common">
                                 <div class="stroke">
                                     <div class="order__stroke-inner">
-                                        <form class="order__form">
+                                        <form class="order__form" id="order-form">
                                             <div class="order__info d-none d-md-block">Заполните форму и дизайнер свяжется с вами</div>
                                             <div class="order__info d-md-none">Заполните форму</div>
                                             <label for="order-form__name" class="label">
-                                                <input type="text" class="input" name="name" id="order-form__name" placeholder="Имя" required>
+                                                <input type="text" class="input" name="order-form__name" id="order-form__name" placeholder="Имя" required>
                                             </label>
                                             <label for="order-form__phone" class="label">
-                                                <input type="text" class="input input__phone" name="phone" id="order-form__phone" placeholder="+7 (___)-___-__-__" required>
+                                                <input type="text" class="input input__phone" name="order-form__phone" id="order-form__phone" placeholder="+7 (___)-___-__-__" required>
                                             </label>
                                             <label for="order-form__email" class="label">
-                                                <input type="email" class="input" name="email" id="order-form__email" placeholder="Email" required>
+                                                <input type="email" class="input" name="order-form__email" id="order-form__email" placeholder="Email" required>
                                             </label>
                                             <label for="order-form__comment" class="label">
-                                                <input type="text" class="input" name="comment" id="order-form__comment" placeholder="Комментарий" required>
+                                                <input type="text" class="input" name="order-form__comment" id="order-form__comment" placeholder="Комментарий" required>
                                             </label>
                                             <label for="order-form__checkbox" class="label label--checkbox">
                                                 <input type="checkbox" class="checkbox" id="order-form__chekbox" required>
@@ -292,6 +292,7 @@
             </div>
         </div>
     </footer>
+    <a href="#send" class="fancy message-sent d-none">Письмо отправлено</a>
     <div class="scroll-up">
         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none">
             <path d="M8.48109 1.10479L0.933333 8.65255C0.755621 8.83026 0.755621 9.11527 0.933333 9.29299C1.11105 9.4707 1.39606 9.4707 1.57377 9.29299L8.79963 2.06712L16.0255 9.29298C16.2032 9.4707 16.4882 9.4707 16.6659 9.29298C16.7531 9.2058 16.8 9.08845 16.8 8.97444C16.8 8.86044 16.7565 8.74308 16.6659 8.6559L9.11817 1.10815C8.94381 0.930434 8.65545 0.930435 8.48109 1.10479Z" fill="#7D7E82"/>
@@ -300,9 +301,11 @@
     <div class="keep-in-touch">
         <div class="keep-in-touch__outer">
             <div class="keep-in-touch__inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M23.3702 18.5153L18.5125 15.2758C17.8961 14.868 17.0697 15.0022 16.614 15.5842L15.199 17.4035C15.0172 17.6433 14.6866 17.7128 14.4235 17.5667L14.1544 17.4183C13.2621 16.9319 12.1519 16.3265 9.91501 14.0888C7.67814 11.8511 7.07144 10.7401 6.58509 9.84943L6.4375 9.58026C6.28935 9.31724 6.35759 8.98527 6.59746 8.80197L8.41556 7.3874C8.99729 6.93161 9.13166 6.10551 8.72433 5.48887L5.48481 0.631187C5.06736 0.00324863 4.22983 -0.185255 3.58356 0.203235L1.55225 1.42344C0.914006 1.79867 0.445747 2.40636 0.245667 3.11918C-0.485802 5.78438 0.0644751 10.3841 6.84028 17.1607C12.2303 22.5503 16.2429 23.9997 19.0009 23.9997C19.6356 24.0024 20.2679 23.9198 20.8806 23.7541C21.5936 23.5543 22.2014 23.086 22.5764 22.4476L23.7978 20.4175C24.1868 19.7711 23.9984 18.933 23.3702 18.5153Z" fill="white"/>
-                </svg>
+                <a href="#keep-in-touch" class="fancy keep-in-touch__inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M23.3702 18.5153L18.5125 15.2758C17.8961 14.868 17.0697 15.0022 16.614 15.5842L15.199 17.4035C15.0172 17.6433 14.6866 17.7128 14.4235 17.5667L14.1544 17.4183C13.2621 16.9319 12.1519 16.3265 9.91501 14.0888C7.67814 11.8511 7.07144 10.7401 6.58509 9.84943L6.4375 9.58026C6.28935 9.31724 6.35759 8.98527 6.59746 8.80197L8.41556 7.3874C8.99729 6.93161 9.13166 6.10551 8.72433 5.48887L5.48481 0.631187C5.06736 0.00324863 4.22983 -0.185255 3.58356 0.203235L1.55225 1.42344C0.914006 1.79867 0.445747 2.40636 0.245667 3.11918C-0.485802 5.78438 0.0644751 10.3841 6.84028 17.1607C12.2303 22.5503 16.2429 23.9997 19.0009 23.9997C19.6356 24.0024 20.2679 23.9198 20.8806 23.7541C21.5936 23.5543 22.2014 23.086 22.5764 22.4476L23.7978 20.4175C24.1868 19.7711 23.9984 18.933 23.3702 18.5153Z" fill="white"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </div>
@@ -323,6 +326,23 @@
                         </label>
                         <input type="submit" class="btn btn--tiffany" value="Отправить">
                     </form>
+                </div>                
+            </div>
+            <div class="modal__close fancybox-close-small" data-fancybox-close>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                    <path d="M0 2.35294L2.35294 0L7.35294 5L12.3529 0L15 2.35294L10 7.35294L15 12.3529L12.3529 15L7.35294 10L2.35294 15L0 12.3529L5 7.35294L0 2.35294Z" fill="white" fill-opacity="0.7"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div id="send" class="modal">
+        <div class="modal__inner">
+            <div class="stroke">
+                <div class="keep-in-touch__stroke-inner text-center">
+                    <img src="img/ok.png" alt="Заявка отправлена" class="modal__img">
+                    <div class="modal__title">Заявка отправлена</div>
+                    <button class="btn btn--tiffany" data-fancybox-close>Понятно</button>
                 </div>                
             </div>
             <div class="modal__close fancybox-close-small" data-fancybox-close>

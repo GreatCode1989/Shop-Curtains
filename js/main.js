@@ -163,6 +163,54 @@ $(function() {
 
     $('body').on('click', '.main__arrow-svg', function() {
         $('html, body').animate({scrollTop:950}, '500');
-    })
+    });
+
+    // Отправка заявки с главной
+
+    $('#form').trigger('reset');
+
+    $('#form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'send.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function(msg) {
+                if (msg == 'ok') {
+                    $('.message-sent').trigger('click');
+                    $('#form').trigger('reset'); // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+            }
+        });
+    });
+
+    // Отправка заявки со страницы заявки
+
+    $('#order-form').trigger('reset');
+
+    $('#order-form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'order.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function(msg) {
+                //console.log(msg);
+                if (msg == 'ok') {
+                    $('.message-sent').trigger('click');
+                    $('#form').trigger('reset'); // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+            }
+        });
+    });
+
 
 });

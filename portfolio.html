@@ -493,6 +493,7 @@
             </div>
         </div>
     </footer>
+    <a href="#send" class="fancy message-sent d-none">Письмо отправлено</a>
     <div class="scroll-up">
         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none">
             <path d="M8.48109 1.10479L0.933333 8.65255C0.755621 8.83026 0.755621 9.11527 0.933333 9.29299C1.11105 9.4707 1.39606 9.4707 1.57377 9.29299L8.79963 2.06712L16.0255 9.29298C16.2032 9.4707 16.4882 9.4707 16.6659 9.29298C16.7531 9.2058 16.8 9.08845 16.8 8.97444C16.8 8.86044 16.7565 8.74308 16.6659 8.6559L9.11817 1.10815C8.94381 0.930434 8.65545 0.930435 8.48109 1.10479Z" fill="#7D7E82"/>
@@ -517,7 +518,7 @@
             <div class="stroke">
                 <div class="keep-in-touch__stroke-inner">
                     <div class="modal__title">Заказать обратный звонок бесплатно</div>
-                    <form class="keep-in-touch__form">
+                    <form enctype="multipart/form-data" method="post" id="keep-in-touch__form" class="keep-in-touch__form">
                         <input type="text" class="input design__form-input" name="keep-in-touch-name" placeholder="Ваше имя" required>
                         <input type="text" class="input input__phone design__form-input input__phone" name="keep-in-touch-phone" placeholder="+7 (___)-___-__-__" required> 
                         <label for="order-form__checkbox" class="label label--checkbox">
@@ -542,7 +543,7 @@
                 <div class="keep-in-touch__stroke-inner text-center">
                     <img src="img/ok.png" alt="Заявка отправлена" class="modal__img">
                     <div class="modal__title">Заявка отправлена</div>
-                    <button class="btn btn--tiffany" data-fancybox-close>Понятно</button>
+                    <button class="btn btn--tiffany">Понятно</button>
                 </div>                
             </div>
             <div class="modal__close fancybox-close-small" data-fancybox-close>

@@ -165,6 +165,11 @@ $(function() {
         $('html, body').animate({scrollTop:950}, '500');
     });
 
+    $('body').on('click', '#send .btn', function() {
+        $.fancybox.close();
+        $.fancybox.close();
+    })
+
     // Отправка заявки с главной
 
     $('#form').trigger('reset');
@@ -204,7 +209,31 @@ $(function() {
                 //console.log(msg);
                 if (msg == 'ok') {
                     $('.message-sent').trigger('click');
-                    $('#form').trigger('reset'); // очистка формы
+                    $('#order-form').trigger('reset'); // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+            }
+        });
+    });
+
+    // Отправка заявки на обратный звонок
+
+    $('#keep-in-touch__form').trigger('reset');
+
+    $('#keep-in-touch__form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'keep-in-touch.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function(msg) {
+                //console.log(msg);
+                if (msg == 'ok') {
+                    $('.message-sent').trigger('click');
+                    $('#keep-in-touch__form').trigger('reset'); // очистка формы
                 } else {
                     alert('Ошибка');
                 }

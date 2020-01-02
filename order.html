@@ -318,7 +318,7 @@
             <div class="stroke">
                 <div class="keep-in-touch__stroke-inner">
                     <div class="modal__title">Заказать обратный звонок бесплатно</div>
-                    <form class="keep-in-touch__form">
+                    <form enctype="multipart/form-data" method="post" id="keep-in-touch__form" class="keep-in-touch__form">
                         <input type="text" class="input design__form-input" name="keep-in-touch-name" placeholder="Ваше имя" required>
                         <input type="text" class="input input__phone design__form-input input__phone" name="keep-in-touch-phone" placeholder="+7 (___)-___-__-__" required> 
                         <label for="order-form__checkbox" class="label label--checkbox">
@@ -343,7 +343,7 @@
                 <div class="keep-in-touch__stroke-inner text-center">
                     <img src="img/ok.png" alt="Заявка отправлена" class="modal__img">
                     <div class="modal__title">Заявка отправлена</div>
-                    <button class="btn btn--tiffany" data-fancybox-close>Понятно</button>
+                    <button class="btn btn--tiffany">Понятно</button>
                 </div>                
             </div>
             <div class="modal__close fancybox-close-small" data-fancybox-close>

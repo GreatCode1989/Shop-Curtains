@@ -4,9 +4,10 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 // Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$text = $_POST['text'];
+$fio = $_POST['order-form__name'];
+$telephone = $_POST['order-form__phone'];
+$email = $_POST['order-form__email'];
+$comment = $_POST['order-form__comment'];
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
     $msg = "ok";
@@ -39,9 +40,11 @@ if (!empty($_FILES['myfile']['name'][0])) {
         // -----------------------
         $mail->isHTML(true);
     
-        $mail->Subject = 'Договориться о встрече';
-        $mail->Body    = "<b>Имя:</b> $name <br>
-        <b>Телефон:</b> $phone<br>";
+        $mail->Subject = 'Заявка с сайта';
+        $mail->Body    = "<b>Имя:</b> $fio <br>
+        <b>Телефон:</b> $telephone<br>
+        <b>E-mail:</b> $email<br>
+        <b>Сообщение:</b> $comment<br><br>";
 // Проверяем отравленность сообщения
 if ($mail->send()) {
     echo "$msg";

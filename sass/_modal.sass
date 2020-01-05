@@ -16,6 +16,9 @@
         text-transform: uppercase
         margin-bottom: 18px
         color: #ffffff
+        &--small
+            font-size: 14px
+            margin-top: 16pxß
     .label--checkbox
         font-weight: 300
         font-size: 14px
@@ -65,4 +68,22 @@
             display: none
         .btn
             outline-color: #ffffff
+    #question
+        background-color: $malina
+        padding: 15px
+        text-align: center
+        height: auto
+        max-width: 460px
+        @media (max-width: 575px)
+            min-height: 475px
+            height: auto
+        .stroke
+            padding: 70px 58px 48px
+            @media (max-width: 575px)
+                height: 100%
+        .fancybox-button.fancybox-close-small
+            display: none
+        .question__ways
+            display: flex
+            align-items: center
             

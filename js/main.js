@@ -241,5 +241,29 @@ $(function() {
         });
     });
 
+    // Модалка Задать вопрос на странице Портфолио
+
+    $('#question__form').trigger('reset');
+
+    $('#question__form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'question.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function(msg) {
+                //console.log(msg);
+                if (msg == 'ok') {
+                    $('.message-sent').trigger('click');
+                    $('#question__form').trigger('reset'); // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+            }
+        });
+    });
+
 
 });

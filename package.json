@@ -1,7 +1,7 @@
 {
   "name": "discover",
   "version": "1.0.0",
-  "description": "Discover Moscow",
+  "description": "Discover",
   "author": "RDS",
   "private": true,
   "scripts": {

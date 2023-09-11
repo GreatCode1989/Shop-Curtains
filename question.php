@@ -34,7 +34,7 @@ try {
     $mail->Port       = 465;
     $mail->setFrom('shtory.shtory.web@gmail.com', 'SHTORY'); // Адрес самой почты и имя отправителя
     // Получатель письма
-    $mail->addAddress('shtory.shtory.web@yandex.ru');  
+    $mail->addAddress('shtory.shtory@gmail.com');  
     // Прикрипление файлов к письму
 if (!empty($_FILES['myfile']['name'][0])) {
     for ($ct = 0; $ct < count($_FILES['myfile']['tmp_name']); $ct++) {

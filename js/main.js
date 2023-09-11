@@ -157,7 +157,7 @@ $(function() {
 
     // Input phone mask
 
-    $('.input__phone').inputmask("+7 (999)-999-99-99");
+    $('.input__phone').inputmask("+38 (999)-999-99-99");
 
     // Main banner arrow
 
